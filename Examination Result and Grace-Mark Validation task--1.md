@@ -1,0 +1,52 @@
+## Problem Statement
+Write a Python program that calculates the average of a list of marks and prints a result based on the average:
+- Distinction if the average is 75 or higher
+- Pass if the average is 50 or higher but below 75
+- Fail if the average is below 50
+  
+## Algorithm
+   
+1. Store the marks in a list.
+2. Calculate the average by dividing their sum by the number of marks.
+3. If the average is at least 75, set the result to "Distinction".
+4. Otherwise, if the average is at least 50, set the result to "Pass".
+5. Otherwise, set the result to "Fail".
+6. Print the result.
+   
+## Flowchart
+```mermaid
+flowchart TD
+    A([Start]) --> B[Set marks = 70, 65, 80]
+    B --> C[Calculate average = sum of marks / number of marks]
+    C --> D{Is average >= 75?}
+    D -- Yes --> E[Set result = Distinction]
+    D -- No --> F{Is average >= 50?}
+    F -- Yes --> G[Set result = Pass]
+    F -- No --> H[Set result = Fail]
+    E --> I[Print result]
+    G --> I
+    H --> I
+    I --> J([End])
+```
+## Pseudocode
+START
+    marks ← [70, 65, 80]
+    average ← SUM(marks) / LENGTH(marks)
+
+    IF average >= 75 THEN
+        result ← "Distinction"
+    ELSE IF average >= 50 THEN
+        result ← "Pass"
+    ELSE
+        result ← "Fail"
+    END IF
+
+    DISPLAY result
+END
+
+## Sample Input
+The marks are defined in the program:
+70, 65, 80
+Sample Output
+Pass
+The average is 71.67, so the result is Pass.
